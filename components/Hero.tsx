@@ -16,7 +16,7 @@ export default function Hero() {
             </div>
 
             <div className="absolute z-50 top-16 right-8">
-                <button className="px-6 py-3 w-[12rem] tracking-[1.5px]  rounded-lg text-[1.2rem] text-white font-semibold bg-orange-600 hover:opacity-90 transition duration-300 shadow-lg">
+                <button className="px-6 py-2 w-[12rem] tracking-[1.2px]  rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
                     Contact Us
                 </button>
 
