@@ -8,7 +8,7 @@ import { Button } from './ui/button'
 export default function Hero() {
     return (
         <div className='h-full w-full flex-col flex justify-center items-center'>
-            <div className="absolute inset-0 bg-black bg-opacity-70 z-20"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-90 z-20"></div>
             <div>
                 <div className="absolute z-50  top-3 left-6">
                     <Image src={logo} alt="logo" width={150} height={150} className="  " />
