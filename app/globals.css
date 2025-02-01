@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Clash Display";
+  src: url("./fonts/OTF/ClashDisplay-Semibold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+ 
 body {
-  font-family: var(--font-beatriceDeck);
+  font-family: "Clash Display", Arial, sans-serif;
 }
 
 @layer base {

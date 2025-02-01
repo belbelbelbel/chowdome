@@ -14,6 +14,13 @@ export default function Hero() {
                     <Image src={logo} alt="logo" width={150} height={150} className="  " />
                 </div>
             </div>
+
+            <div className="absolute z-50 top-16 right-8">
+                <button className="px-6 py-3 w-[12rem] tracking-[1.5px]  rounded-lg text-[1.2rem] text-white font-semibold bg-orange-600 hover:opacity-90 transition duration-300 shadow-lg">
+                    Contact Us
+                </button>
+
+            </div>
             {/* <div className='flex absolute top-16 left-0  h-[3rem] items-center justify-center w-full'>
                 <div className='  top-6 left- text-2xl  z-50'>Contact Us</div>
             </div> */}
@@ -26,7 +33,12 @@ export default function Hero() {
                 <Input placeholder='Room Number' />
             </div>
             <div>
-                <Button className=''>Sign Up Progress</Button>
+                <div className="relative top-5 z-50">
+                    <button className="px-6 py-3 w-[20rem] tracking-[1.5px]  rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
+                        Submit
+                    </button>
+
+                </div>
             </div>
         </div>
     )
