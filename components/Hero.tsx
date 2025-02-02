@@ -2,8 +2,6 @@ import React from 'react'
 import logo from "../public/logo.jpg"
 import Image from 'next/image'
 import { Input } from './ui/input'
-import { Button } from './ui/button'
-
 
 export default function Hero() {
     return (

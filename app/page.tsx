@@ -1,7 +1,6 @@
 'use client'
 import Hero from "@/components/Hero";
 import Lottie from 'lottie-react';
-
 import animationData from '../components/lotties/Animation - 1738441076866.json';
 export default function Home() {
   return (
@@ -12,10 +11,11 @@ export default function Home() {
             Chowdome Logistics
           </h2>
           <p className="text-lg text-gray-100 text-center tracking-[1px] leading-relaxed">
-            Fast, secure, and hassle-free. Whether it's across the city or across borders, we deliver with precision and reliability. Your cargo, our commitment.
-          </p>
-          <div className="absolute top-[18rem] left-40 ">
-          <Lottie animationData={animationData} loop={true} autoplay={true} className="w-[400px] absolute h-[400px]" />
+  Fast, secure, and hassle-free. Whether it&apos;s across the city or across borders, we deliver with precision and reliability. Your cargo, our commitment.
+</p>
+
+          <div className="absolute top-[18rem] left-40">
+            <Lottie animationData={animationData} loop={true} autoplay={true} className="w-[400px] absolute h-[400px]" />
           </div>
         </div>
       </div>
