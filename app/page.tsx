@@ -1,4 +1,3 @@
-'use client'
 import Hero from "@/components/Hero";
 import Lottie from 'lottie-react';
 import animationData from '../components/lotties/Animation - 1738441076866.json';
