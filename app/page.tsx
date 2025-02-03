@@ -20,7 +20,9 @@ export default function Home() {
           <h2 className="text-center text-[3.7rem] font-bold text-transparent bg-clip-text bg-gradient-to-l z-50 relative from-gray-300 via-orange-700 to-orange-500 mb-4">
             Chowdome Logistics
           </h2>
-        
+          <p className="text-lg text-gray-100 text-center tracking-[1px] leading-relaxed">
+            Fast, secure, and hassle-free. Whether it&apos;s across the city or across borders, we deliver with precision and reliability. Your cargo, our commitment.
+          </p>
 
           {isClient && (
             <div className="absolute top-[15rem] left-40">
