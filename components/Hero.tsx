@@ -103,7 +103,7 @@ export default function Hero() {
           
             <div>
                 <div className="relative top-5 z-50">
-                    <button className="px-6 py-3 w-[20rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
+                    <button className="px-6 py-3 w-[20rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
                         Submit
                     </button>
                 </div>
