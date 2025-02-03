@@ -83,7 +83,7 @@ export default function Hero() {
             </div>
 
             
-            <div className=" flex flex-col gap-10  xl:gap-8  mt-10 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] xl:w-[94%] z-30 h-full xl:h-[90%] ">
+            <div className=" flex flex-col gap-10  xl:gap-8  mt-20 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] xl:w-[94%] z-30 h-full xl:h-[90%] ">
                 <div className='flex xl:flex-row flex-col items-center xl:gap-5 gap-8'>
                     <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text' />
                     <Input placeholder='Email' value={formProfile.email} type='email' name='email' onChange={handleChange} />
