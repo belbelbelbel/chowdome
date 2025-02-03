@@ -7,6 +7,11 @@ import { useRouter } from 'next/navigation'
 import Select from './Selected'
 import SelectedHalls from './SelectedHalls'
 import { Textarea } from './ui/textarea'
+import Selecteddelivered from './Selecteddelivered'
+import animationData from "../components/lotties/Animation - 1738441076866.json";
+import dynamic from 'next/dynamic'
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Hero() {
     const [formProfile, setFormProfile] = useState({
@@ -16,6 +21,10 @@ export default function Hero() {
         hall: "",
         roomNo: ""
     });
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
     const router = useRouter()
     const formattedAmount = '1500'
     useEffect(() => {
@@ -59,40 +68,42 @@ export default function Hero() {
         }
     }
     return (
-        <div className='h-full w-full flex-col flex justify-center items-center'>
+        <div className='h-full w-full flex-col flex justify-center bg-black items-center'>
             <div className="absolute inset-0 bg-black bg-opacity-90 z-20"></div>
             <div>
-                <div className="absolute z-50  top-3 left-6">
+                <div className="absolute z-50  top-3 left-0 xl:left-6">
                     <Image src={logo} alt="logo" width={150} height={150} className="  " />
                 </div>
             </div>
 
-            <div className="absolute z-50 top-16 right-8">
-                <button className="px-6 py-2 w-[12rem] border-0 outline-0  tracking-[1.2px]  rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
+            <div className="absolute hidden xl:flex z-50 xl:top-16 right-4">
+                <button className="px-6 py-2 w-[10rem] md:w-[12rem] border-0 outline-0  tracking-[1.2px]  rounded-lg text-[1rem] xl:text-[1.1rem] text-white font-semibold bg-gradient-to-l from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
                     Contact Us
                 </button>
             </div>
-            <div className=" flex flex-col  gap-8 p-6 mt-20 rounded-[1rem] shadow-xl border-[1.5px] border-black w-[94%] z-30 h-[90%] ">
-                <div className='flex items-center gap-5'>
+
+            
+            <div className=" flex flex-col gap-10  xl:gap-8 p-6 mt-20 rounded-[1rem] shadow-xl border-[1.5px] border-black w-full xl:w-[94%] z-30 h-full xl:h-[90%] ">
+                <div className='flex xl:flex-row flex-col items-center xl:gap-5 gap-8'>
                     <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text' />
                     <Input placeholder='Email' value={formProfile.email} type='email' name='email' onChange={handleChange} />
                 </div>
-                <div className='flex gap-5'>
+                <div className='flex xl:flex-row flex-col gap-8 xl:gap-5'>
                     <Input placeholder='Matric-No' value={formProfile.matricNo} type='text' name='matricNo' onChange={handleChange} />
                     <Input placeholder='Room Number' value={formProfile.roomNo} type='text' name='roomNo' onChange={handleChange} />
-
                 </div>
                 <Select />
-                <Select />
+                <Selecteddelivered />
                 <SelectedHalls />
                 {/* <Input placeholder='Description of Item' type='text' name='roomNo' onChange={handleChange} /> */}
-                <Textarea placeholder='Give a description of item'/>
+                <Textarea placeholder='Give a description of item' />
                 {/* <Input placeholder='Hall' value={formProfile.hall} type='text' name='hall' onChange={handleChange} /> */}
-
             </div>
+
+          
             <div>
                 <div className="relative top-5 z-50">
-                    <button  className="px-6 py-3 w-[20rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
+                    <button className="px-6 py-3 w-[20rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
                         Submit
                     </button>
                 </div>
