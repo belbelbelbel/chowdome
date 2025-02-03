@@ -14,9 +14,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-bg-img- bg-contain bg-no-repeat h-screen flex gap-28 xl:gap-12 xl:flex-row flex-col items-center justify-center w-screen text-white bg-black">
+    <div className="bg-bg-img- bg-contain bg-no-repeat h-screen flex  xl:gap-12 xl:flex-row flex-col items-center  w-screen text-white bg-black">
       <div className="xl:w-[50%] w-full bg-gradient-to-b from-black via-black to-orange-600 h-full">
-        <div className=" xl:h-[70%] w-full h-full xl:mt-16 mt-[31.4rem] gap-3 xl:gap-0 flex items-center justify-center flex-col p-8 rounded-lg xl:max-w-3xl z-50 relative mx-auto my-16">
+        <div className=" xl:h-[70%] w-full h-full mt-[6rem] xl:mt-16 gap-3 xl:gap-0 flex items-center justify-center flex-col p-8 rounded-lg xl:max-w-3xl z-50 relative mx-auto my-16">
           <h2 className="text-left xl:text-center text-[3.4rem] tracking-[2px] xl:tracking-[0px]  md:text-[3.7rem] leading-[3.6rem] xl:leading-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-l z-50 relative from-gray-300 via-orange-700 to-orange-500 xl:mb-4">
             Chowdome Logistics
           </h2>
