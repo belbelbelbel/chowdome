@@ -4,14 +4,17 @@ import logo from "../public/logo.jpg"
 import Image from 'next/image'
 import { Input } from './ui/input'
 import { useRouter } from 'next/navigation'
+import Select from './Selected'
+import SelectedHalls from './SelectedHalls'
+import { Textarea } from './ui/textarea'
 
 export default function Hero() {
     const [formProfile, setFormProfile] = useState({
         firstName: "",
         matricNo: "",
         email: "",
-        hall:  "",
-        roomNo : ""
+        hall: "",
+        roomNo: ""
     });
     const router = useRouter()
     const formattedAmount = '1500'
@@ -25,11 +28,11 @@ export default function Hero() {
         };
     }, []);
 
-    const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
-        const {value ,name} = e.target
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { value, name } = e.target
         setFormProfile({
             ...formProfile,
-            [name] : value
+            [name]: value
         })
     }
 
@@ -47,7 +50,7 @@ export default function Hero() {
                 notification_url: "https://example.com/webhook",
                 onClose: () => {
                     router.push('/')
-                    setFormProfile({firstName: "", matricNo: "", email: "", hall:  "", roomNo : "" })
+                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "" })
                 }
             });
 
@@ -65,24 +68,33 @@ export default function Hero() {
             </div>
 
             <div className="absolute z-50 top-16 right-8">
-                <button className="px-6 py-2 w-[12rem] tracking-[1.2px]  rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
+                <button className="px-6 py-2 w-[12rem] border-0 outline-0  tracking-[1.2px]  rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
                     Contact Us
                 </button>
-
             </div>
-            <div className=" flex flex-col  gap-12 p-6 mt-10 rounded-[1rem] shadow-xl border-[1.5px] border-black w-[80%] z-30 h-[80%] ">
-                <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text'/>
-                <Input placeholder='Email' value={formProfile.email} type='email' name='email' onChange={handleChange}/> 
-                <Input placeholder='Matric-No'  value={formProfile.matricNo} type='text' name='matricNo' onChange={handleChange}/>
-                <Input placeholder='Hall' value={formProfile.hall} type='text' name='hall' onChange={handleChange}/>
-                <Input placeholder='Room Number' value={formProfile.roomNo} type='text' name='roomNo' onChange={handleChange}/>
+            <div className=" flex flex-col  gap-8 p-6 mt-20 rounded-[1rem] shadow-xl border-[1.5px] border-black w-[94%] z-30 h-[90%] ">
+                <div className='flex items-center gap-5'>
+                    <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text' />
+                    <Input placeholder='Email' value={formProfile.email} type='email' name='email' onChange={handleChange} />
+                </div>
+                <div className='flex gap-5'>
+                    <Input placeholder='Matric-No' value={formProfile.matricNo} type='text' name='matricNo' onChange={handleChange} />
+                    <Input placeholder='Room Number' value={formProfile.roomNo} type='text' name='roomNo' onChange={handleChange} />
+
+                </div>
+                <Select />
+                <Select />
+                <SelectedHalls />
+                {/* <Input placeholder='Description of Item' type='text' name='roomNo' onChange={handleChange} /> */}
+                <Textarea placeholder='Give a description of item'/>
+                {/* <Input placeholder='Hall' value={formProfile.hall} type='text' name='hall' onChange={handleChange} /> */}
+
             </div>
             <div>
                 <div className="relative top-5 z-50">
-                    <button className="px-6 py-3 w-[20rem] tracking-[1.5px]  rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
+                    <button  className="px-6 py-3 w-[20rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-b from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
                         Submit
                     </button>
-
                 </div>
             </div>
         </div>

@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <div className="bg-bg-img- bg-contain bg-no-repeat h-screen flex items-center justify-center w-screen text-white bg-black">
       <div className="w-[50%] bg-gradient-to-b from-black via-black to-orange-600 h-full">
-        <div className="bgm-gray-100/80 h-[85%] flex items-center justify-center flex-col p-8 rounded-lg max-w-3xl z-50 relative mx-auto my-16">
-          <h2 className="text-center text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-l z-50 relative from-gray-300 via-orange-700 to-orange-500 mb-6">
+        <div className=" h-[70%] flex items-center justify-center flex-col p-8 rounded-lg max-w-3xl z-50 relative mx-auto my-16">
+          <h2 className="text-center text-[3.7rem] font-bold text-transparent bg-clip-text bg-gradient-to-l z-50 relative from-gray-300 via-orange-700 to-orange-500 mb-4">
             Chowdome Logistics
           </h2>
           <p className="text-lg text-gray-100 text-center tracking-[1px] leading-relaxed">
@@ -25,8 +25,8 @@ export default function Home() {
           </p>
 
           {isClient && (
-            <div className="absolute top-[18rem] left-40">
-              <Lottie animationData={animationData} loop={true} autoplay={true} className="w-[400px] absolute h-[400px]" />
+            <div className="absolute top-[15rem] left-40">
+              <Lottie animationData={animationData} loop={true} autoplay={true} className="w-[410px] absolute h-[410px]" />
             </div>
           )}
         </div>
