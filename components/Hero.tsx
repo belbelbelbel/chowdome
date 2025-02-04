@@ -19,7 +19,8 @@ export default function Hero() {
         matricNo: "",
         email: "",
         hall: "",
-        roomNo: ""
+        roomNo: "",
+        description: ""
     });
     const [isClient, setIsClient] = useState(false);
     useEffect(() => {
@@ -37,7 +38,7 @@ export default function Hero() {
         };
     }, []);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value, name } = e.target
         setFormProfile({
             ...formProfile,
@@ -59,7 +60,7 @@ export default function Hero() {
                 notification_url: "https://example.com/webhook",
                 onClose: () => {
                     router.push('/')
-                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "" })
+                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "", description: "" })
                 }
             });
 
@@ -72,7 +73,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-black bg-opacity-90 z-20"></div>
             <div>
                 <div className="absolute z-50  top-3 left-0 xl:left-6">
-                    <Image src={logo} alt="logo" width={150} height={150} className="  " />
+                    <Image src={logo} alt="logo" priority={true} width={150} height={150} className="  " />
                 </div>
             </div>
 
@@ -82,7 +83,7 @@ export default function Hero() {
                 </button>
             </div>
 
-            <div className=" flex flex-col gap-[3rem]  xl:gap-8  mt-20 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] 2xl:w-[90%] xl:w-[96%] z-30 h-full xl:h-[90%] ">
+            <div className=" flex flex-col gap-[3rem]  xl:gap-6  mt-20 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] 2xl:w-[90%] xl:w-[96%] z-30 h-full xl:h-[90%] ">
                 <div className='flex xl:flex-row flex-col items-center xl:gap-5 gap-[3rem]'>
                     <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text' />
                     <Input placeholder='Email' value={formProfile.email} type='email' name='email' onChange={handleChange} />
@@ -94,12 +95,22 @@ export default function Hero() {
                 <Select />
                 <Selecteddelivered />
                 <SelectedHalls />
+                <div>
+                    <div className='flex items-center gap-5 w-[95%] mx-auto'>
+                        <div className='flex items-center gap-2'>
+                            <div>No</div>
+                            <input type="radio" id="contactChoice1" name="contact" value="no" className='border-0 outline-0' />
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <div>Yes</div>
+                            <input type="radio" id="contactChoice2" name="contact" value="yes" className='border-0 outline-0 ' />
+                        </div>
+                    </div>
+                </div>
                 {/* <Input placeholder='Description of Item' type='text' name='roomNo' onChange={handleChange} /> */}
-                <Textarea placeholder='Give a description of item' />
+                <Textarea placeholder='Give a description of item' value={formProfile.description} onChange={handleChange}/>
                 {/* <Input placeholder='Hall' value={formProfile.hall} type='text' name='hall' onChange={handleChange} /> */}
             </div>
-
-
             <div className='w-full  '>
                 <div className="md:relative flex items-center flex justify-center xl:my-0 my-5 mb-10 w-full z-50 top-5 z-50">
                     <button className="px-6 py-3 md:py-3 w-[90%]  lt:h-[3.5rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>

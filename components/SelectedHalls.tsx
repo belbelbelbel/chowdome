@@ -18,18 +18,16 @@ export default function SelectedHalls() {
         { title: "Paul Hall", value: "Paul" },
         { title: "John Hall", value: "John" },
         { title: "Lydia Hall", value: "Lydia" },
-        { title: "Mary Hall", value: "Mary" }
+        { title: "Mary Hall", value: "mary" },
+        { title: "Chapel", value: "chapel" }
     ];
 
 
     return (
         <Select >
-           <SelectTrigger placeholder="Hall Of Residence" className="">
-  <SelectValue className="text-neutral-300 data-[placeholder]:text-neutral-700 data-[placeholder]:opacity-100" />
-</SelectTrigger>
-
-
-
+            <SelectTrigger placeholder="Your  Hall Of Residence" className="">
+                <SelectValue className="text-neutral-300 tracking-[1px] data-[placeholder]:text-neutral-700 data-[placeholder]:opacity-100" />
+            </SelectTrigger>
 
             <SelectContent>
                 <SelectGroup>

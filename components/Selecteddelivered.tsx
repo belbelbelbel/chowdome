@@ -11,15 +11,16 @@ import {
 
 export default function Selecteddelivered() {
     const names = [
-        { title: "Daniel Hall", value: "Daniel" },
-        { title: "Joseph Hall", value: "Joseph" },
-        { title: "Deborah Hall", value: "Deborah" },
-        { title: "Esther Hall", value: "Esther" },
-        { title: "Peter Hall", value: "Peter" },
-        { title: "Paul Hall", value: "Paul" },
-        { title: "John Hall", value: "John" },
-        { title: "Lydia Hall", value: "Lydia" },
-        { title: "Mary Hall", value: "Mary" }
+        { title: "Daniel Hall", value: "daniel" },
+        { title: "Joseph Hall", value: "joseph" },
+        { title: "Deborah Hall", value: "deborah" },
+        { title: "Esther Hall", value: "esther" },
+        { title: "Peter Hall", value: "peter" },
+        { title: "Paul Hall", value: "paul" },
+        { title: "John Hall", value: "john" },
+        { title: "Lydia Hall", value: "lydia" },
+        { title: "Mary Hall", value: "mary" },
+        { title: "Chapel", value: "chapel" }
     ];
     return (
         <Select >

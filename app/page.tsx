@@ -8,7 +8,6 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
     setIsClient(true);
   }, []);
