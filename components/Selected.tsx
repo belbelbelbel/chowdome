@@ -11,21 +11,32 @@ import React from 'react'
 
 
 export default function Selected() {
+  const names = [
+    { title: "Daniel Hall", value: "Daniel" },
+    { title: "Joseph Hall", value: "Joseph" },
+    { title: "Deborah Hall", value: "Deborah" },
+    { title: "Esther Hall", value: "Esther" },
+    { title: "Peter Hall", value: "Peter" },
+    { title: "Paul Hall", value: "Paul" },
+    { title: "John Hall", value: "John" },
+    { title: "Lydia Hall", value: "Lydia" },
+    { title: "Mary Hall", value: "Mary" }
+  ];
+
+
   return (
     <Select >
-      <SelectTrigger placeholder="Pickup Location">
-        <SelectValue />
+      <SelectTrigger placeholder="Pickup Location" className="">
+        <SelectValue className="text-neutral-300 data-[placeholder]:text-neutral-700 data-[placeholder]:opacity-100" />
       </SelectTrigger>
-
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>North America</SelectLabel>
-          <SelectItem value="est" className="">Eastern Standard Time (EST)</SelectItem>
-          <SelectItem value="cst">Central Standard Time (CST)</SelectItem>
-          <SelectItem value="mst">Mountain Standard Time (MST)</SelectItem>
-          <SelectItem value="pst">Pacific Standard Time (PST)</SelectItem>
-          <SelectItem value="akst">Alaska Standard Time (AKST)</SelectItem>
-          <SelectItem value="hst">Hawaii Standard Time (HST)</SelectItem>
+          {/* <SelectLabel>North America</SelectLabel> */}
+          {names.map((name) => (
+            <SelectItem key={name.value} value={name.value.toLowerCase()} className="">
+              {name.title}
+            </SelectItem>
+          ))}
         </SelectGroup>
 
       </SelectContent>

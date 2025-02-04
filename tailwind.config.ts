@@ -23,6 +23,17 @@ export default {
 				'bg-img-2': "url('/img2.jpg')",
 				'bg-img-3': "url('/img3.jpg')",
 				'bg-img-4': "url('/img4.jpg')",
+			},
+			screens: {
+				'sm': '640px',
+				'lt': '768px',
+				'md': '800px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1300px',
+				'3xl': '1430px',
+				'4xl': '1536px',
+				'5xl': '2500px',
 			}
 		}
 	},
