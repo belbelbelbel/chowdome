@@ -97,6 +97,7 @@ export default function Hero() {
                 <SelectedHalls />
                 <div>
                     <div className='flex items-center gap-5 w-[95%] mx-auto'>
+                        <div>Location In School ?</div>
                         <div className='flex items-center gap-2'>
                             <div>No</div>
                             <input type="radio" id="contactChoice1" name="contact" value="no" className='border-0 outline-0' />
