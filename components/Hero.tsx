@@ -103,7 +103,7 @@ export default function Hero() {
 
             <div className='w-full  '>
                 <div className="md:relative flex items-center flex justify-center xl:my-0 my-5 mb-10 w-full z-50 top-5 z-50">
-                    <button className="px-6 py-3 md:py-3 w-[80%]  lt:h-[4rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
+                    <button className="px-6 py-3 md:py-3 w-[80%]  lt:h-[3.5rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
                         Submit
                     </button>
                 </div>
