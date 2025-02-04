@@ -82,7 +82,6 @@ export default function Hero() {
                 </button>
             </div>
 
-
             <div className=" flex flex-col gap-[3rem]  xl:gap-8  mt-20 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] 2xl:w-[90%] xl:w-[96%] z-30 h-full xl:h-[90%] ">
                 <div className='flex xl:flex-row flex-col items-center xl:gap-5 gap-[3rem]'>
                     <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text' />
@@ -103,7 +102,7 @@ export default function Hero() {
 
             <div className='w-full  '>
                 <div className="md:relative flex items-center flex justify-center xl:my-0 my-5 mb-10 w-full z-50 top-5 z-50">
-                    <button className="px-6 py-3 md:py-3 w-[80%]  lt:h-[3.5rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
+                    <button className="px-6 py-3 md:py-3 w-[90%]  lt:h-[3.5rem] tracking-[1.5px] border-0 outline-0 rounded-lg text-[1.1rem] text-white font-semibold bg-gradient-to-r from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg" onClick={payKorapay}>
                         Submit
                     </button>
                 </div>
