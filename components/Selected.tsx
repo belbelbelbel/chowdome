@@ -20,11 +20,12 @@ export default function Selected() {
     { title: "Paul Hall", value: "Paul" },
     { title: "John Hall", value: "John" },
     { title: "Lydia Hall", value: "Lydia" },
-    { title: "Mary Hall", value: "Mary" }
+    { title: "Mary Hall", value: "Mary" },
+    { title: "Chapel", value: "chapel" }
   ];
 
 
-  
+
   return (
     <Select >
       <SelectTrigger placeholder="Pickup Location" className="">

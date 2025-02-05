@@ -57,7 +57,7 @@ export default function Home() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="absolute bottom-5 left-5 bg-white z-50  text-black p-4 rounded-lg shadow-lg w-[18rem] text-sm flex items-center justify-between"
         >
-          <p className="font-semibold">⚠️   Ensure the person is in their room before proceeding.</p>
+          <p className="font-semibold">⚠️ <span></span>  Ensure the person is in their room before proceeding.</p>
           <button
             onClick={() => setShowCard(false)}
             className="ml-3 text-black hover:text-gray-500 transition duration-200"

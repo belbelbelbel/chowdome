@@ -94,7 +94,8 @@ export default function Hero() {
                 </div>
                 <Select />
                 <Selecteddelivered />
-                <SelectedHalls />
+                {/* <SelectedHalls /> */}
+                <Input placeholder='Your Hall Of Residence' value={formProfile.roomNo} type='text' name='roomNo' onChange={handleChange} />
                 <div className='hidden'>
                     <div className='flex items-center gap-5 w-[95%] mx-auto'>
                         <div>Location In School ?</div>
