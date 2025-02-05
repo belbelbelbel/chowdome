@@ -78,12 +78,12 @@ export default function Hero() {
             </div>
 
             <div className="absolute hidden xl:flex z-50 xl:top-16 right-8">
-                <button className="px-6 py-2 w-[10rem] md:w-[12rem] border-0 outline-0  tracking-[1.2px]  rounded-lg text-[1rem] xl:text-[1.1rem] text-white font-semibold bg-gradient-to-l from-gray-900 via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
+                <button className="px-6 py-2 w-[10rem] md:w-[12rem] border-0 outline-0  tracking-[1.2px]  rounded-lg text-[1rem] xl:text-[1.1rem] text-white font-semibold bg-gradient-to-l from-black via-orange-700 to-orange-500 hover:opacity-90 transition duration-300 shadow-lg">
                     Contact Us
                 </button>
             </div>
 
-            <div className=" flex flex-col gap-[3rem]  xl:gap-7  mt-20 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] 2xl:w-[90%] xl:w-[96%] z-30 h-full xl:h-[90%] ">
+            <div className=" flex flex-col gap-[3rem]  xl:gap-8  mt-20 rounded-[1rem]  shadow-xl border-[1.5px] border-black w-[90%] 2xl:w-[90%] xl:w-[96%] z-30 h-full xl:h-[90%] ">
                 <div className='flex xl:flex-row flex-col items-center xl:gap-5 gap-[3rem]'>
                     <Input placeholder='Name' value={formProfile.firstName} name='firstName' onChange={handleChange} type='text' />
                     <Input placeholder='Email' value={formProfile.email} type='email' name='email' onChange={handleChange} />
@@ -95,7 +95,7 @@ export default function Hero() {
                 <Select />
                 <Selecteddelivered />
                 <SelectedHalls />
-                <div>
+                <div className='hidden'>
                     <div className='flex items-center gap-5 w-[95%] mx-auto'>
                         <div>Location In School ?</div>
                         <div className='flex items-center gap-2'>
@@ -109,7 +109,7 @@ export default function Hero() {
                     </div>
                 </div>
                 {/* <Input placeholder='Description of Item' type='text' name='roomNo' onChange={handleChange} /> */}
-                <Textarea placeholder='Give a description of item' value={formProfile.description} onChange={handleChange}/>
+                <Textarea placeholder='Give a description of item' value={formProfile.description} name='description' onChange={handleChange}/>
                 {/* <Input placeholder='Hall' value={formProfile.hall} type='text' name='hall' onChange={handleChange} /> */}
             </div>
             <div className='w-full  '>
