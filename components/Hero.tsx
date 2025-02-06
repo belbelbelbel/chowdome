@@ -20,7 +20,9 @@ export default function Hero() {
         email: "",
         hall: "",
         roomNo: "",
-        description: ""
+        description: "",
+        pickup: '',
+        delivery: ''
     });
     const [isClient, setIsClient] = useState(false);
     useEffect(() => {
@@ -60,7 +62,7 @@ export default function Hero() {
                 notification_url: "https://example.com/webhook",
                 onClose: () => {
                     router.push('/')
-                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "", description: "" })
+                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "", description: "" ,pickup:'', delivery: ''})
                 }
             });
 
@@ -92,10 +94,11 @@ export default function Hero() {
                     <Input placeholder='Matric-No' value={formProfile.matricNo} type='text' name='matricNo' onChange={handleChange} />
                     <Input placeholder='Room Number' value={formProfile.roomNo} type='text' name='roomNo' onChange={handleChange} />
                 </div>
-                <Select />
-                <Selecteddelivered />
+
                 {/* <SelectedHalls /> */}
-                <Input placeholder='Your Hall Of Residence' value={formProfile.roomNo} type='text' name='roomNo' onChange={handleChange} />
+                <Input placeholder='Your Hall Of Residence' value={formProfile.hall} type='text' name='hall' onChange={handleChange} />
+                <Input placeholder='Pickup Location' value={formProfile.pickup} type='text' name='pickup' onChange={handleChange} />
+                <Input placeholder='Delivery Location' value={formProfile.delivery} type='text' name='delivery' onChange={handleChange} />
                 <div className='hidden'>
                     <div className='flex items-center gap-5 w-[95%] mx-auto'>
                         <div>Location In School ?</div>
