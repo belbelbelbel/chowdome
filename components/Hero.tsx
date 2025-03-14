@@ -30,15 +30,7 @@ export default function Hero() {
     }, []);
     const router = useRouter()
     const formattedAmount = '1500'
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = "https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js";
-        script.async = true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
+   
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value, name } = e.target
@@ -47,6 +39,16 @@ export default function Hero() {
             [name]: value
         })
     }
+
+     useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js";
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
 
     function payKorapay() {
         if ((window as any).Korapay) {
@@ -59,10 +61,10 @@ export default function Hero() {
                     name: formProfile.firstName,
                     email: formProfile.email
                 },
-                notification_url: "https://example.com/webhook",
+                // notification_url: "https://example.com/webhook",
                 onClose: () => {
                     router.push('/')
-                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "", description: "" ,pickup:'', delivery: ''})
+                    setFormProfile({ firstName: "", matricNo: "", email: "", hall: "", roomNo: "", description: "", pickup: '', delivery: '' })
                 }
             });
 
@@ -113,7 +115,7 @@ export default function Hero() {
                     </div>
                 </div>
                 {/* <Input placeholder='Description of Item' type='text' name='roomNo' onChange={handleChange} /> */}
-                <Textarea placeholder='Give a description of item' value={formProfile.description} name='description' onChange={handleChange}/>
+                <Textarea placeholder='Give a description of item' value={formProfile.description} name='description' onChange={handleChange} />
                 {/* <Input placeholder='Hall' value={formProfile.hall} type='text' name='hall' onChange={handleChange} /> */}
             </div>
             <div className='w-full  '>
